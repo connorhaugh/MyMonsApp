@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".SeeTeamsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTeamName"
+                app:layout_collapseMode="none"
+                android:text="@string/your_team"
+                android:theme="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                >
+
+                <ProgressBar
+                    android:id="@+id/pbhp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/app_bar_height"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:max="300"
+                    android:progress="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pbhp"
+                    app:layout_constraintTop_toTopOf="@+id/pbhp" />
+
+                <ProgressBar
+                    android:id="@+id/pbspe"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/app_bar_height"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:max="300"
+                    android:progress="0"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/pbhp"
+                    app:layout_constraintTop_toBottomOf="@id/pbhp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SPE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pbspe"
+                    app:layout_constraintTop_toTopOf="@+id/pbspe" />
+
+                <ProgressBar
+                    android:id="@+id/pbspdef"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/app_bar_height"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:max="300"
+                    android:progress="0"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/pbspe"
+                    app:layout_constraintTop_toBottomOf="@id/pbspe" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SPDef"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pbspdef"
+                    app:layout_constraintTop_toTopOf="@+id/pbspdef" />
+
+
+                <ProgressBar
+                    android:id="@+id/pbdef"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/app_bar_height"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:max="300"
+                    android:progress="0"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/pbspdef"
+                    app:layout_constraintTop_toBottomOf="@id/pbspdef" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DEF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pbdef"
+                    app:layout_constraintTop_toTopOf="@+id/pbdef"/>
+
+
+                <ProgressBar
+                    android:id="@+id/pbspatt"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/app_bar_height"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:max="300"
+                    android:progress="0"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/pbdef"
+                    app:layout_constraintTop_toBottomOf="@id/pbdef" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sp.ATT"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pbspatt"
+                    app:layout_constraintTop_toTopOf="@+id/pbspatt" />
+
+                <ProgressBar
+                    android:id="@+id/pbatt"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/app_bar_height"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:max="300"
+                    android:progress="0"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/pbspatt"
+                    app:layout_constraintTop_toBottomOf="@id/pbspatt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ATT"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pbatt"
+                    app:layout_constraintTop_toTopOf="@+id/pbatt" />
+
+                <TextView
+                    android:id="@+id/tvWeakness"
+                    android:layout_width="@dimen/app_bar_height"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pbatt" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSave"
+                android:text="@string/save_this_team"
+                android:layout_gravity="bottom"
+                app:layout_collapseMode="pin"
+                android:onClick="saveTeam"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSocial"
+                android:text="Social"
+                android:layout_gravity="right|bottom"
+                app:layout_collapseMode="pin"
+                android:onClick="launchSocial"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:id="@+id/btnAdd"
+                android:text="@string/add"
+                android:onClick="addMon"
+                />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPokemon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
